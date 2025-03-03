@@ -1,11 +1,10 @@
-        body {
+   html, body {
     font-family: Arial, sans-serif;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    height: 100%;
     background-color: #342836;
     color: #fff;
+    flex-direction: column;
 }
 
 .container {
@@ -15,6 +14,8 @@
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
     width: 350px;
+    flex-grow: 1;
+    margin: auto;
 }
 
 
@@ -68,4 +69,18 @@ button:hover {
 .controls {
     text-align: left;
     margin: 10px 0;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    background-color: #161517;
+    position: relative;
+    color: aquamarine;
+}
+.contact-links {
+    margin: 10px;
+    color: aquamarine;
+    font-size: 1.5rem;
 }
