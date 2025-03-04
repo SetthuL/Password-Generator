@@ -1,4 +1,5 @@
 function generatePassword() {
+    console.log("Generate password function is running!");
 
     let length = document.getElementById("length").value;
     let includeNumbers = document.getElementById("includeNumbers").checked;
@@ -19,7 +20,13 @@ function generatePassword() {
 function copy_password() {
     let password_field = document.getElementById("password");
     password_field.select();
-    alert("Password copied!");
+    password_field.setSelectionRange(0, 99999);
+    navigator.clipboard.writeText(password_field.value).then(() => {
+       alert("Password copied!"); 
+    }).catch(err => {
+        console.error("Failed to copy password!:", err);
+    });
+    
 }
 
 function updateStrength(password) {
